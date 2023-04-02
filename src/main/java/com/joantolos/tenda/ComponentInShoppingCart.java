@@ -17,4 +17,8 @@ public class ComponentInShoppingCart {
     public Integer getUnits() {
         return units;
     }
+
+    public String getId(String shoppingCartId) {
+        return shoppingCartId + component.getName();
+    }
 }

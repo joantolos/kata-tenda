@@ -1,21 +1,27 @@
 package com.joantolos.tenda;
 
+import java.util.ArrayList;
+
 public class Member extends Client {
 
-    private final Integer memberNumer;
+    private final Integer memberNumber;
     private final Integer year;
 
-    public Member(String dni, String name, Integer memberNumer, Integer year) {
-        super(dni, name);
-        this.memberNumer = memberNumer;
+    public Member(String dni, String name, Integer memberNumber, Integer year) {
+        super(dni, name, new ArrayList<>());
+        this.memberNumber = memberNumber;
         this.year = year;
     }
 
-    public Integer getMemberNumer() {
-        return memberNumer;
+    public Integer getMemberNumber() {
+        return memberNumber;
     }
 
     public Integer getYear() {
         return year;
+    }
+
+    public Integer discountPercentage() {
+        return 10;
     }
 }
