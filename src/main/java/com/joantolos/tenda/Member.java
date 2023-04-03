@@ -1,6 +1,6 @@
 package com.joantolos.tenda;
 
-public class Member extends Client {
+public class Member extends Client implements Discount {
 
     private final Integer memberNumber;
     private final Integer year;
@@ -19,6 +19,7 @@ public class Member extends Client {
         return year;
     }
 
+    @Override
     public Integer discountPercentage() {
         return 10;
     }

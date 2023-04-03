@@ -3,7 +3,7 @@ package com.joantolos.tenda;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Client {
+public class Client implements Discount {
     private final String dni;
     private final String name;
     private final List<Component> interests;
@@ -36,9 +36,12 @@ public abstract class Client {
         this.interests.remove(component);
     }
 
-    public abstract Integer discountPercentage();
-
     public void addPurchase(ShoppingCart shoppingCart) {
         this.purchases.add(shoppingCart);
+    }
+
+    @Override
+    public Integer discountPercentage() {
+        return 0;
     }
 }
