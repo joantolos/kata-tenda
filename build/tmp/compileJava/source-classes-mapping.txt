@@ -1,13 +1,13 @@
-com/joantolos/tenda/Member.java
- com.joantolos.tenda.Member
+com/joantolos/tenda/ComponentInShoppingCart.java
+ com.joantolos.tenda.ComponentInShoppingCart
 com/joantolos/tenda/Client.java
  com.joantolos.tenda.Client
 com/joantolos/tenda/Component.java
  com.joantolos.tenda.Component
-com/joantolos/tenda/ComponentInShoppingCart.java
- com.joantolos.tenda.ComponentInShoppingCart
 com/joantolos/tenda/StockWaiting.java
  com.joantolos.tenda.StockWaiting
+com/joantolos/tenda/Member.java
+ com.joantolos.tenda.Member
 com/joantolos/tenda/ShoppingCart.java
  com.joantolos.tenda.ShoppingCart
 com/joantolos/tenda/Served.java

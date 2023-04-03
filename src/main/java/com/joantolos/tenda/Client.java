@@ -7,11 +7,13 @@ public abstract class Client {
     private final String dni;
     private final String name;
     private final List<Component> interests;
+    private final List<ShoppingCart> purchases;
 
     public Client(String dni, String name) {
         this.dni = dni;
         this.name = name;
         this.interests = new ArrayList<>();
+        this.purchases = new ArrayList<>();
     }
 
     public String getDni() {
@@ -35,4 +37,8 @@ public abstract class Client {
     }
 
     public abstract Integer discountPercentage();
+
+    public void addPurchase(ShoppingCart shoppingCart) {
+        this.purchases.add(shoppingCart);
+    }
 }
