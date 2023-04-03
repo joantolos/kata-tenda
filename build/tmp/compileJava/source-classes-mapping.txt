@@ -14,3 +14,5 @@ com/joantolos/tenda/ShoppingCart.java
  com.joantolos.tenda.ShoppingCart
 com/joantolos/tenda/Served.java
  com.joantolos.tenda.Served
+com/joantolos/tenda/Premium.java
+ com.joantolos.tenda.Premium
