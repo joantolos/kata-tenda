@@ -1,4 +1,0 @@
-com/joantolos/tenda/ClientTest.java
- com.joantolos.tenda.ClientTest
-com/joantolos/tenda/ServedShoppingCartTest.java
- com.joantolos.tenda.ServedShoppingCartTest

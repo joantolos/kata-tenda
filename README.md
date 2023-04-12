@@ -1,3 +1,3 @@
-# Kata Words
+# Kata Tenda
 
-It repeats what you write
+Models an on-line store for computer components
