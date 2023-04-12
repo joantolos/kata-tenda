@@ -1,6 +1,6 @@
 package com.joantolos.tenda;
 
-public class Component {
+public abstract class Component {
 
     private final String name;
     private final String description;
