@@ -1,19 +1,23 @@
 package com.joantolos.tenda;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public abstract class Component {
+public abstract class Component extends Subject {
 
     private final String name;
     private final String description;
     private final Integer price;
-    private final Integer stock;
+    private Integer stock;
+    private List<Observer> observers;
 
     public Component(String name, String description, Integer price, Integer stock) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stock = stock;
+        this.observers = new ArrayList<>();
     }
 
     public String getName() {
@@ -30,6 +34,26 @@ public abstract class Component {
 
     public Integer getStock() {
         return stock;
+    }
+
+    @Override
+    public void addObserver(Observer o) {
+        super.addObserver(o);
+        observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        super.removeObserver(o);
+        observers.remove(o);
+    }
+
+    public void stockArrive(int quantity) {
+        if (stock == 0 && quantity > 0) {
+            // L'estoc ha canviat de zero a un nombre positiu
+            notifyObservers(name);
+        }
+        stock += quantity;
     }
 
     @Override
