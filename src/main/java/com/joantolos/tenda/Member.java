@@ -1,6 +1,6 @@
 package com.joantolos.tenda;
 
-public class Member extends Client implements Discount {
+public class Member extends Client implements ClientDiscount {
 
     private final Integer memberNumber;
     private final Integer year;

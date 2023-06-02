@@ -10,12 +10,15 @@ public abstract class ShoppingCart {
     private final Integer hour;
     private final Client client;
     private final List<ComponentInShoppingCart> components;
+    private DiscountStrategy discountStrategy;
 
     public ShoppingCart(Date date, Integer hour, Client client) {
         this.date = date;
         this.hour = hour;
         this.client = client;
         this.components = new ArrayList<>();
+        // Per defecte, no hi ha cap descompte aplicat
+        discountStrategy = null;
     }
 
     public Date getDate() {
@@ -42,14 +45,23 @@ public abstract class ShoppingCart {
         this.components.add(component);
     }
 
-    // How to discount a percentage:
-    // To work out 30% divide 30 by 100 and multiply by the amount. Subtract from the original amount.
+    public void setDiscountStrategy(DiscountStrategy strategy) {
+        discountStrategy = strategy;
+    }
+
     public Integer getPrice() {
-        Double price = 0D;
-        for (ComponentInShoppingCart componentInShoppingCart : components) {
-            price += componentInShoppingCart.getComponent().getPrice() * componentInShoppingCart.getUnits();
+        int totalPrice = 0;
+        for (ComponentInShoppingCart component : components) {
+            totalPrice += component.getComponent().getPrice() * component.getUnits();
         }
-        double discount = Double.valueOf(client.discountPercentage()) / new Double(100);
-        return ((Double) (price - (price * discount))).intValue();
+        return totalPrice;
+    }
+
+    public Integer getPriceWithDiscount() {
+        int price = getPrice();
+        if (discountStrategy != null) {
+            return discountStrategy.applyDiscount(price);
+        }
+        return price;
     }
 }

@@ -1,6 +1,6 @@
 package com.joantolos.tenda;
 
-public interface Discount {
+public interface ClientDiscount {
 
     Integer discountPercentage();
 }

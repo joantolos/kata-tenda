@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Client implements Discount {
+public class Client implements ClientDiscount {
     private final String dni;
     private final String name;
     private final List<Interest> interests;

@@ -1,6 +1,6 @@
 package com.joantolos.tenda;
 
-public class Premium extends Client implements Discount {
+public class Premium extends Client implements ClientDiscount {
 
     private final Integer premiumNumber;
 
