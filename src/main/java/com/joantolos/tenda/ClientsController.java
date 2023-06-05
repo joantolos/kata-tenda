@@ -7,7 +7,7 @@ public class ClientsController {
     public Client newClient(String dni, String name) {
         Client c = new Client(dni, name);
         Translations t = Translations.getInstance();
-        view.setMessage(t.getTranslation(WELCOME_TO_SHOP_MESSAGE_ID));
+//        view.setMessage(t.getTranslation(WELCOME_TO_SHOP_MESSAGE_ID));
         return c;
     }
 }

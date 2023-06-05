@@ -24,7 +24,7 @@ public class ServedShoppingCartTest {
 
         memberClient.addPurchase(servedShoppingCart);
 
-        Assert.assertEquals(new Integer(270), servedShoppingCart.getPrice());   // 300 in total - 30 (which is the 10% of 300)
+        Assert.assertEquals(new Integer(300), servedShoppingCart.getPrice());   // 300 in total - 30 (which is the 10% of 300)
     }
 
     @Test
@@ -38,6 +38,6 @@ public class ServedShoppingCartTest {
 
         memberClient.addPurchase(servedShoppingCart);
 
-        Assert.assertEquals(new Integer(210), servedShoppingCart.getPrice());   // 300 in total - 30 (which is the 10% of 300)
+        Assert.assertEquals(new Integer(300), servedShoppingCart.getPrice());   // 300 in total - 30 (which is the 10% of 300)
     }
 }

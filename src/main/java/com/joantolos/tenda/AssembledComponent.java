@@ -8,7 +8,7 @@ public class AssembledComponent extends Component {
     private final List<Component> components;
 
     public AssembledComponent(String name, String description, Integer price, Integer stock) {
-        super(name, description, price, stock);
+        super(name, description, price, stock, new InternalCategory("Assembled", ""));
         this.components = new ArrayList<>();
     }
 

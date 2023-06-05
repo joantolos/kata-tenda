@@ -11,13 +11,15 @@ public abstract class Component extends Subject {
     private final Integer price;
     private Integer stock;
     private List<Observer> observers;
+    private Category belongsToCategory;
 
-    public Component(String name, String description, Integer price, Integer stock) {
+    public Component(String name, String description, Integer price, Integer stock, Category belongsToCategory) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stock = stock;
         this.observers = new ArrayList<>();
+        this.belongsToCategory = belongsToCategory;
     }
 
     public String getName() {
@@ -34,6 +36,10 @@ public abstract class Component extends Subject {
 
     public Integer getStock() {
         return stock;
+    }
+
+    public Category getBelongsToCategory() {
+        return belongsToCategory;
     }
 
     @Override
